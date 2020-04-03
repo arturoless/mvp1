@@ -2,6 +2,7 @@ package com.example.mvp1.ui.fragments;
 
 import androidx.lifecycle.ViewModelProviders;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.mvp1.R;
+import com.example.mvp1.ui.activities.ListaUsuariosActivity;
 
 public class MainFragment extends Fragment {
 
@@ -42,23 +44,8 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 if("admin".equals(String.valueOf(password.getText()))){
-                    Bundle bundle = new Bundle();
-                    bundle.putString("userType", "admin");
-                    TablaFragment tabla = new TablaFragment();
-                    tabla.setArguments(bundle);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.container, tabla)
-                            .commitNow();
-
-                }
-                else if("user".equals(String.valueOf(password.getText()))){
-                    Bundle bundle = new Bundle();
-                    bundle.putString("userType", "user");
-                    TablaFragment tabla = new TablaFragment();
-                    tabla.setArguments(bundle);
-                    getActivity().getSupportFragmentManager().beginTransaction()
-                            .replace(R.id.container, tabla)
-                            .commitNow();
+                    Intent intent = new Intent( getActivity().getBaseContext(), ListaUsuariosActivity.class);
+                    startActivity(intent);
                 }
 
 

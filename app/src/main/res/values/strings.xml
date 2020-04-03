@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MVP1</string>
+    <string name="button_editar">Editar</string>
+    <string name="button_eliminar">Eliminar</string>
+    <string name="nombre">Nombre</string>
+    <string name="apellido">Apellido</string>
+    <string name="email">Correo electrónico</string>
+    <string name="guardar">GUARDAR</string>
+    <string name="cancelar">CANCELAR</string>
+
+
+
+
+
+
 </resources>
